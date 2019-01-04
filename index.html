@@ -261,7 +261,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/23/firstblog/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/04/IDEA使用Maven-archetype构建模板工程/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhao.xiaobo">
@@ -280,7 +280,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/23/firstblog/" itemprop="url">firstblog</a></h1>
+                <a class="post-title-link" href="/2019/01/04/IDEA使用Maven-archetype构建模板工程/" itemprop="url">IDEA使用Maven-archetype构建模板工程</a></h1>
         
 
         <div class="post-meta">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-23T09:52:44+08:00">
-                2018-12-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-04T14:29:44+08:00">
+                2019-01-04
               </time>
             
 
@@ -311,8 +311,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/12/23/firstblog/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/12/23/firstblog/" itemprop="commentCount"></span>
+                <a href="/2019/01/04/IDEA使用Maven-archetype构建模板工程/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2019/01/04/IDEA使用Maven-archetype构建模板工程/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -342,144 +342,39 @@
       
         
           
-            <h4 id="HELLO-WORLD"><a href="#HELLO-WORLD" class="headerlink" title="HELLO WORLD"></a>HELLO WORLD</h4>
-          
-        
-      
-    </div>
-    
-    
-    
+            <h3 id="IDEA使用Maven-archetype构建模板工程"><a href="#IDEA使用Maven-archetype构建模板工程" class="headerlink" title="IDEA使用Maven-archetype构建模板工程"></a>IDEA使用Maven-archetype构建模板工程</h3><h4 id="官方文档参考"><a href="#官方文档参考" class="headerlink" title="官方文档参考"></a>官方文档参考</h4><p><a href="https://maven.apache.org/guides/mini/guide-creating-archetypes.html" target="_blank" rel="noopener">官方文档</a></p>
+<h4 id="创建maven工程"><a href="#创建maven工程" class="headerlink" title="创建maven工程"></a>创建maven工程</h4><p><img src="/2019/01/04/IDEA使用Maven-archetype构建模板工程/createMavenProject.png" alt=""></p>
+<p>如上图首先创建一个maven工程，然后开始进行工程配置，在resources目录下增加archetype-resources,用于放模板工程的相关资源,此外还要增加一个描述模板内容的xml文件archetype-metadata.xml，放在resources/META-INF/maven目录中，如下图所示。</p>
+<p><img src="/2019/01/04/IDEA使用Maven-archetype构建模板工程/mavenfolder.png" alt=""></p>
+<h4 id="配置模板工程"><a href="#配置模板工程" class="headerlink" title="配置模板工程"></a>配置模板工程</h4><p>构建自己的模板工程结构：</p>
+<p><img src="/2019/01/04/IDEA使用Maven-archetype构建模板工程/javaTemplate.png" alt=""></p>
+<p>archetype 默认提供 artifactId,groupId,version,package属性用于用户参数化模板中的值：例如模板工程的pom文件:</p>
+<p><img src="/2019/01/04/IDEA使用Maven-archetype构建模板工程/pom.png" alt=""></p>
+<p>archetype-metadata.xml 配置</p>
+<pre><code>&lt;fileSet filtered=&quot;true&quot; encoding=&quot;UTF-8&quot; packaged=&quot;true&quot;&gt;
+  &lt;directory&gt;src/main/java&lt;/directory&gt;
+  &lt;includes&gt;
+    &lt;include&gt;**/*.**&lt;/include&gt;
+  &lt;/includes&gt;
+&lt;/fileSet&gt;
 
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/23/hello-world/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhao.xiaobo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="FzNl's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/23/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-23T09:30:43+08:00">
-                2018-12-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/12/23/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/12/23/hello-world/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+&lt;requiredProperties&gt;
+    &lt;requiredProperty key=&quot;testKey&quot;&gt;
+    &lt;/requiredProperty&gt;
+&lt;/requiredProperties&gt;
+</code></pre><p>filtered=true时,模板开启参数替换功能，将src/main/java目录下满足include通配的所有文件中${key}替换为用户所设置的值。  </p>
+<p>packaged=”true”时，在src/main/java文件夹下创建${package}结构的目录，同时将include的所有文件放置${packag}下。</p>
+<p>用户可使用requiredProperties自定义属性。  </p>
+<p>注意：工程模板建立空文件夹时，通过模板创建的工程会删除该文件夹，需特殊处理。</p>
+<h4 id="发布，并使用其创建工程"><a href="#发布，并使用其创建工程" class="headerlink" title="发布，并使用其创建工程"></a>发布，并使用其创建工程</h4><p>在模板工程所在maven工程进行mvn clean install 发布</p>
+<p>如下图，创建新工程时，勾选create from archetype，并使用 add archetype 输入自己创建的模板工程groupId等信息，并选择自己的模板工程进行创建  </p>
+<p><img src="/2019/01/04/IDEA使用Maven-archetype构建模板工程/createByTemplate.png" alt=""></p>
+<p>如有自定义参数可在如下页面进行添加：  </p>
+<p><img src="/2019/01/04/IDEA使用Maven-archetype构建模板工程/addProperties.png" alt=""></p>
+<p>同样可以使用mvn archetype:generate 来创建新工程。</p>
+<h4 id="简单模板工程创建"><a href="#简单模板工程创建" class="headerlink" title="简单模板工程创建"></a>简单模板工程创建</h4><p>如果模板工程简单，同样可以使用 mvn archetype:create-from-project 命令来通过maven工程创建模板，运行后进入 target/generated-sources/archetype 目录，运行mvn install 即可。  </p>
+<p>注意：使用此工程创建的模板,增加archetype时artifactId的值为原maven工程artifactId-archetype，例如：原工程artifactId为abc,现工程为abc-archetype</p>
+<h4 id="删除archetype"><a href="#删除archetype" class="headerlink" title="删除archetype"></a>删除archetype</h4><p>由于idea只提供了增加archetype的界面，没有删除功能，如果需要删除则要到.IntelliJIdea2018.1\system\Maven\Indices\UserArchetypes.xml 文件内删除自定义信息</p>
 
           
         
@@ -561,7 +456,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
